@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:enjoy_app/widgets/bottom_nav_bar.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,47 +26,26 @@ class HomePage extends StatefulWidget {
 }
 
 class _State extends State<HomePage> {
-  int _selectedIndex = 0;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
   @override
   Widget build(BuildContext context) {
-     // width and height of device
+    // width and height of device
     var size = MediaQuery.of(context).size;
-    return Scaffold(
+    var scaffold = Scaffold(
       body: Stack(
         children: <Widget>[
           Container(
             height: size.height * .40,
             color: Color(0xFFffe0b2), // #ffe0b2 grey: 0xFF90a4ae
-          )
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text('Home'),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_today),
-            title: Text('Today'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            title: Text('Settings'),
+          SafeArea(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+            ),
           ),
         ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
-        onTap: _onItemTapped,
       ),
-    ); 
+      bottomNavigationBar: MyBottomNavBar(),
+    );
+    return scaffold;
   }
 }
-
-
