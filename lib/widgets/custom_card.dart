@@ -9,31 +9,38 @@ class CustomCard extends StatelessWidget {
   const CustomCard({this.imageSrc, this.caption, this.onTap});
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 5,
+    return SizedBox(
+      width: 200.0,
+      height: 250.0,
       child: InkWell(
-        child: Container(
-          decoration: BoxDecoration(color: Colors.white12),
-          // height: 100,
-          // width: 160,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Image.asset(
-                imageSrc,
-                fit: BoxFit.cover,
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: <Widget>[
+            Image.asset(
+              imageSrc,
+              // fit: BoxFit.contain,
+            ),
+            Container(
+              padding: EdgeInsets.all(1.0),
+              alignment: Alignment.bottomCenter,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: <Color>[
+                    Colors.black.withAlpha(0),
+                    Colors.black12,
+                    Colors.black45
+                  ],
+                ),
               ),
-              SizedBox(
-                height: 25,
-              ),
-              Text(
+              child: Text(
                 caption,
                 style: kCardCaption,
                 textAlign: TextAlign.center,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
         onTap: onTap,
       ),
