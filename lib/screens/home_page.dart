@@ -1,3 +1,4 @@
+import 'package:enjoy_app/constants.dart';
 import 'package:enjoy_app/widgets/custom_card.dart';
 import 'package:flutter/material.dart';
 import 'package:enjoy_app/widgets/bottom_nav_bar.dart';
@@ -22,25 +23,41 @@ class _State extends State<HomePage> {
           SafeArea(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
-              child: GridView.count(
-                crossAxisCount: 2,
-                childAspectRatio: .85,
-                crossAxisSpacing: 20,
-                mainAxisSpacing: 20,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  CustomCard(
-                    imageSrc: "assets/images/fitness.png",
-                    caption: 'Yoga exercises',
-                    onTap: () {
-                      Navigator.pushNamed(context, '/b');
-                    },
+                  Container(
+                    color: Colors.amber,
+                    width: 50,
+                    height: 50,
                   ),
-                  CustomCard(
-                    imageSrc: "assets/images/meditation.jpg",
-                    caption: 'Meditation',
-                    onTap: () {
-                      Navigator.pushNamed(context, '/c');
-                    },
+                  Text(
+                    "Hello Maik",
+                    style: kCardCaption,
+                  ),
+                  Expanded(
+                    child: GridView.count(
+                      crossAxisCount: 2,
+                      childAspectRatio: .85,
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20,
+                      children: <Widget>[
+                        CustomCard(
+                          imageSrc: "assets/images/fitness.png",
+                          caption: 'Yoga exercises',
+                          onTap: () {
+                            Navigator.pushNamed(context, '/b');
+                          },
+                        ),
+                        CustomCard(
+                          imageSrc: "assets/images/meditation.jpg",
+                          caption: 'Meditation',
+                          onTap: () {
+                            Navigator.pushNamed(context, '/c');
+                          },
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
