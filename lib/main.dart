@@ -16,6 +16,11 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: HomePage(),
+      routes: <String, WidgetBuilder>{
+        '/a': (BuildContext context) => HomePage(),
+        // '/b': (BuildContext context) => YogaScreen(),
+        // '/c': (BuildContext context) => MeditationScreen(),
+      },
     );
   }
 }
