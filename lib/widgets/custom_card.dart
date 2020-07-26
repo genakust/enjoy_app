@@ -10,15 +10,15 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 200.0,
-      height: 250.0,
+      width: 150.0,
+      height: 200.0,
       child: InkWell(
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
+        splashColor: Colors.grey,
+        child: Stack(
           children: <Widget>[
             Image.asset(
               imageSrc,
-              // fit: BoxFit.contain,
+              fit: BoxFit.fill,
             ),
             Container(
               padding: EdgeInsets.all(1.0),
