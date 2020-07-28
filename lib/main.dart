@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
         '/a': (BuildContext context) => HomePage(),
         // '/b': (BuildContext context) => YogaScreen(),
         // '/c': (BuildContext context) => MeditationScreen(),
+        // '/d': (BuildContext context) => EyesExercisesScreen(),
       },
     );
   }
