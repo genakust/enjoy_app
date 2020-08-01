@@ -17,7 +17,15 @@ class _State extends State<HomePage> {
         children: <Widget>[
           Container(
             height: size.height * .35,
-            color: Color(0xFFffe0b2),
+
+               child: Expanded(
+                child: Image.asset(
+                  "assets/images/forest.png",
+                  fit: BoxFit.cover,
+                ),
+              ),
+
+
           ),
           Expanded(
             child: GridView.count(
