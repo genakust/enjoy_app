@@ -17,12 +17,15 @@ class _State extends State<HomePage> {
         children: <Widget>[
           Container(
             height: size.height * .35,
+            width: size.width,
             child: Stack(
               children: <Widget>[
-                Expanded(
-                  child: Image.asset(
-                    "assets/images/forest.png",
-                    fit: BoxFit.cover,
+                Container(
+                  child: Expanded(
+                    child: Image.asset(
+                      "assets/images/forest.png",
+                      fit: BoxFit.fill,
+                    ),
                   ),
                 ),
                 Container(
