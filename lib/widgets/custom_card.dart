@@ -9,45 +9,39 @@ class CustomCard extends StatelessWidget {
   const CustomCard({this.imageSrc, this.caption, this.onTap});
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(10.5),
-      child: SizedBox(
-        width: 150.0,
-        height: 200.0,
-        child: InkWell(
-          splashColor: Colors.grey,
-          child: Stack(
-            alignment: Alignment(0.0, 0.1),
-            children: <Widget>[
-              Image.asset(
-                imageSrc,
-                fit: BoxFit.fill,
-              ),
-              Container(
-                padding: EdgeInsets.all(1.0),
-                alignment: Alignment.bottomCenter,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: <Color>[
-                      Colors.black.withAlpha(0),
-                      Colors.black12,
-                      Colors.black45
-                    ],
-                  ),
-                ),
-                child: Text(
-                  caption,
-                  style: kCardCaption,
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ],
+    return InkWell(
+      splashColor: Colors.grey,
+      child: Column(
+        children: <Widget>[
+          Expanded(
+            child: Image.asset(
+              imageSrc,
+              fit: BoxFit.cover,
+            ),
           ),
-          onTap: onTap,
-        ),
+          Container(
+            padding: EdgeInsets.all(1.0),
+            alignment: Alignment.bottomCenter,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: <Color>[
+                  Colors.black.withAlpha(0),
+                  Colors.black12,
+                  Colors.black45
+                ],
+              ),
+            ),
+            child: Text(
+              caption,
+              style: kCardCaption,
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ],
       ),
+      onTap: onTap,
     );
   }
 }

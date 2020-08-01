@@ -16,27 +16,29 @@ class _State extends State<HomePage> {
       body: Column(
         children: <Widget>[
           Container(
-            height: size.height * .35,
             width: size.width,
+            height: size.height * 0.35,
             child: Stack(
               children: <Widget>[
-                Container(
-                  child: Expanded(
-                    child: Image.asset(
-                      "assets/images/forest.png",
-                      fit: BoxFit.fill,
-                    ),
+                Expanded(
+                  child: Image.asset(
+                    "assets/images/forest.png",
+                    fit: BoxFit.cover,
                   ),
                 ),
                 Container(
                   padding: EdgeInsets.all(15.0),
                   alignment: Alignment.bottomLeft,
-                  child: Text(
-                    'Hello Mike',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 24.0),
+                  child: Row(
+                    children: <Widget>[
+                      Text(
+                        'Hello Mike',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 24.0),
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -45,8 +47,8 @@ class _State extends State<HomePage> {
           Expanded(
             child: GridView.count(
               crossAxisCount: 2,
-              mainAxisSpacing: 0.0,
-              crossAxisSpacing: 10.0,
+              mainAxisSpacing: 5.0,
+              crossAxisSpacing: 5.0,
               padding: const EdgeInsets.all(4.0),
               children: <Widget>[
                 CustomCard(

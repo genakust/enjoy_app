@@ -11,6 +11,10 @@ class _MyBottomNavBarState extends State<MyBottomNavBar> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      if (_selectedIndex == 0){
+        /// back to the home screen
+        Navigator.pushNamed(context, '/a');
+      }
     });
   }
 
