@@ -17,15 +17,27 @@ class _State extends State<HomePage> {
         children: <Widget>[
           Container(
             height: size.height * .35,
-
-               child: Expanded(
-                child: Image.asset(
-                  "assets/images/forest.png",
-                  fit: BoxFit.cover,
+            child: Stack(
+              children: <Widget>[
+                Expanded(
+                  child: Image.asset(
+                    "assets/images/forest.png",
+                    fit: BoxFit.cover,
+                  ),
                 ),
-              ),
-
-
+                Container(
+                  padding: EdgeInsets.all(15.0),
+                  alignment: Alignment.bottomLeft,
+                  child: Text(
+                    'Hello Mike',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 24.0),
+                  ),
+                ),
+              ],
+            ),
           ),
           Expanded(
             child: GridView.count(
