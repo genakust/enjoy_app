@@ -1,8 +1,11 @@
+import 'package:enjoy_app/screens/meditation_page.dart';
 import 'package:enjoy_app/widgets/custom_card.dart';
 import 'package:flutter/material.dart';
 import 'package:enjoy_app/widgets/bottom_nav_bar.dart';
+import 'package:enjoy_app/widgets/picture_with_text.dart';
 
 class HomePage extends StatefulWidget {
+  static const String id = 'home_screen';
   @override
   _State createState() => _State();
 }
@@ -18,30 +21,9 @@ class _State extends State<HomePage> {
           Container(
             width: size.width,
             height: size.height * 0.35,
-            child: Stack(
-              children: <Widget>[
-                Expanded(
-                  child: Image.asset(
-                    "assets/images/forest.png",
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.all(15.0),
-                  alignment: Alignment.bottomLeft,
-                  child: Row(
-                    children: <Widget>[
-                      Text(
-                        'Hello Mike',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 24.0),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+            child: PictureWithText(
+              caption: 'Hello',
+              picturePfad: "assets/images/forest.png",
             ),
           ),
           Expanded(
@@ -62,7 +44,7 @@ class _State extends State<HomePage> {
                   imageSrc: "assets/images/meditation.jpg",
                   caption: 'Meditation',
                   onTap: () {
-                    Navigator.pushNamed(context, '/c');
+                    Navigator.pushNamed(context, MeditationScreen.id);
                   },
                 ),
                 CustomCard(

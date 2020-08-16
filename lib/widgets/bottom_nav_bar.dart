@@ -1,3 +1,4 @@
+import 'package:enjoy_app/screens/home_page.dart';
 import 'package:flutter/material.dart';
 
 class MyBottomNavBar extends StatefulWidget {
@@ -11,9 +12,9 @@ class _MyBottomNavBarState extends State<MyBottomNavBar> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
-      if (_selectedIndex == 0){
+      if (_selectedIndex == 0) {
         /// back to the home screen
-        Navigator.pushNamed(context, '/a');
+        Navigator.pushNamed(context, HomePage.id);
       }
     });
   }

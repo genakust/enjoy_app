@@ -1,3 +1,4 @@
+import 'package:enjoy_app/screens/meditation_page.dart';
 import 'package:flutter/material.dart';
 import 'package:enjoy_app/screens/home_page.dart';
 
@@ -10,16 +11,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Enjoy',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePage(),
+      initialRoute: HomePage.id,
       routes: <String, WidgetBuilder>{
-        '/a': (BuildContext context) => HomePage(),
+        HomePage.id: (BuildContext context) => HomePage(),
         // '/b': (BuildContext context) => YogaScreen(),
-        // '/c': (BuildContext context) => MeditationScreen(),
+        MeditationScreen.id: (BuildContext context) => MeditationScreen(),
         // '/d': (BuildContext context) => EyesExercisesScreen(),
       },
     );
