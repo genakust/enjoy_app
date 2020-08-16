@@ -18,6 +18,7 @@ class _MeditationScreenState extends State<MeditationScreen> {
           PictureWithText(
             caption: 'meditate',
             picturePfad: "assets/images/treewithstones.jpg",
+            size: size,
           ),
         ],
       ),

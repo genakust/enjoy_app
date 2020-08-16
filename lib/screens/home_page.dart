@@ -19,11 +19,10 @@ class _State extends State<HomePage> {
       body: Column(
         children: <Widget>[
           Container(
-            width: size.width,
-            height: size.height * 0.35,
             child: PictureWithText(
               caption: 'Hello',
               picturePfad: "assets/images/forest.png",
+              size: size,
             ),
           ),
           Expanded(
