@@ -15,13 +15,9 @@ class _MeditationScreenState extends State<MeditationScreen> {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          Container(
-            // width: size.width,
-            height: size.height * 0.35,
-            child: PictureWithText(
-              caption: 'meditate',
-              picturePfad: "assets/images/treewithstones.jpg",
-            ),
+          PictureWithText(
+            caption: 'meditate',
+            picturePfad: "assets/images/treewithstones.jpg",
           ),
         ],
       ),

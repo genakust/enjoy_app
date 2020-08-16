@@ -9,10 +9,13 @@ class PictureWithText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
-        Expanded(
-          child: Image.asset(
-            picturePfad,
-            fit: BoxFit.cover,
+        Container(
+          alignment: Alignment.center,
+          child: Expanded(
+            child: Image.asset(
+              picturePfad,
+              fit: BoxFit.cover,
+            ),
           ),
         ),
         Container(
