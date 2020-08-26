@@ -1,3 +1,4 @@
+import 'package:enjoy_app/screens/eye_exercises.dart';
 import 'package:enjoy_app/screens/meditation_page.dart';
 import 'package:flutter/material.dart';
 import 'package:enjoy_app/screens/home_page.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         HomePage.id: (BuildContext context) => HomePage(),
         // '/b': (BuildContext context) => YogaScreen(),
         MeditationScreen.id: (BuildContext context) => MeditationScreen(),
-        // '/d': (BuildContext context) => EyesExercisesScreen(),
+        EyeExersises.id: (BuildContext context) => EyeExersises(),
       },
     );
   }

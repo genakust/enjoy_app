@@ -1,3 +1,4 @@
+import 'package:enjoy_app/screens/eye_exercises.dart';
 import 'package:enjoy_app/screens/meditation_page.dart';
 import 'package:enjoy_app/widgets/custom_card.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +51,7 @@ class _State extends State<HomePage> {
                   imageSrc: "assets/images/meditation.jpg",
                   caption: 'eyes exercises',
                   onTap: () {
-                    Navigator.pushNamed(context, '/d');
+                    Navigator.pushNamed(context, EyeExersises.id);
                   },
                 ),
               ],
