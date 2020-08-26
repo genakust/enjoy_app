@@ -4,12 +4,12 @@ import 'package:enjoy_app/widgets/bottom_nav_bar.dart';
 import 'package:enjoy_app/widgets/circle.dart';
 
 class EyeExersises extends StatefulWidget {
+  static const String id = 'eye_exersises';
   @override
-  _EyeExersises_State createState() => _EyeExersises_State();
+  _EyeExersisesState createState() => _EyeExersisesState();
 }
 
-class _EyeExersises_State extends State<EyeExersises> {
-  static const String id = 'eye_exersises';
+class _EyeExersisesState extends State<EyeExersises> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
